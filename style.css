@@ -1,55 +1,161 @@
+/* --- 1. COLOR SETTINGS (Change these!) --- */
+:root {
+    --school-primary: #003366; /* Main school color (Dark Blue) */
+    --school-secondary: #ffcc00; /* Accent color (Gold/Yellow) */
+    --text-color: #333;
+    --background-gray: #f9f9f9;
+}
+
+/* --- 2. GENERAL SETUP --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--background-gray);
+}
+
+/* --- 3. NAVIGATION BAR --- */
+.navbar {
+    background-color: var(--school-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: sticky; /* Keeps nav bar stuck to top */
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-logo {
+    height: 50px; /* Adjusts logo size */
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.school-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: var(--school-secondary);
+}
+
+/* --- 4. HERO SECTION (BANNER) --- */
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--school-secondary);
+}
+
+.hero h1 {
+    color: var(--school-primary);
+    font-size: 2.5rem;
+}
+
+.cta-button {
+    background-color: var(--school-secondary);
+    color: var(--school-primary);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+/* --- 5. PRODUCTS --- */
+.category-section {
+    padding: 40px 20px;
     text-align: center;
 }
 
-header {
-    background-color: #003366; /* Change this to your school color */
-    color: white;
-    padding: 20px;
+.section-title {
+    color: var(--school-primary);
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
 .product-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
+    gap: 20px;
 }
 
 .product-card {
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 15px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 20px;
     width: 250px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Moves up slightly when hovered */
 }
 
 .product-card img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
 }
 
 .price {
-    font-weight: bold;
     color: #27ae60;
-    font-size: 1.2em;
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .buy-button {
-    display: inline-block;
-    background-color: #28a745;
+    display: block;
+    background-color: var(--school-primary);
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
+    padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
 }
 
 .buy-button:hover {
-    background-color: #218838;
+    background-color: #002244;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
